@@ -1,5 +1,10 @@
 # IfArith Compiler Project
 
+For this project, you must fork / clone the GitHub repo and make your
+own with your solutions and discussion. There are three deliverables:
+compiler.rkt, several new programs in test-programs, and
+discussion.md.
+
 This is a group code review project--you should plan for roughly 5
 hours outside of class meeting with your group (in person or zoom is
 fine, as long as everyone is there together). There will be a small

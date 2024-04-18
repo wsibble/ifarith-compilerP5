@@ -1,5 +1,6 @@
 # Discussion and Reflection
 
+
 The bulk of this project consists of a collection of five
 questions. You are to answer these questions after spending some
 amount of time looking over the code together to gather answers for
@@ -12,16 +13,23 @@ Questions will largely be graded on completion and maturity, but the
 instructors do reserve the right to take off for technical
 inaccuracies (i.e., if you say something factually wrong).
 
-Each of these questions should take roughly at least a paragraph or
-two. Try to aim for between 1-500 words per question. You may divide
-up the work, but each of you should collectively read and agree to
-each other's answers.
+Each of these (six, five main followed by last) questions should take
+roughly at least a paragraph or two. Try to aim for between 1-500
+words per question. You may divide up the work, but each of you should
+collectively read and agree to each other's answers.
 
 [ Question 1 ] 
 
-For this task, you will three four new .irv programs. These are
+For this task, you will three new .irv programs. These are
 `ir-virtual?` programs in a pseudo-assembly format. Try to compile the
-program.
+program. Here, you should briefly explain the purpose of ir-virtual,
+especially how it is different than x86: what are the pros and cons of
+using ir-virtual as a representation? You can get the compiler to to
+compile ir-virtual files like so: 
+
+racket compiler.rkt -v test-programs/sum1.irv 
+
+(Also pass in -m for Mac)
 
 [ Question 2 ] 
 
@@ -67,7 +75,7 @@ semester.
 
 In this question, you will play the role of bug finder. I would like
 you to be creative, adversarial, and exploratory. Spend an hour or two
-looking throught the code and try to break it. Try to see if you can
+looking throughout the code and try to break it. Try to see if you can
 identify a buggy program: a program that should work, but does
 not. This could either be that the compiler crashes, or it could be
 that it produces code which will not assemble. Last, even if the code
