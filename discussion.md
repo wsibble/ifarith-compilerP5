@@ -3,12 +3,19 @@
 The bulk of this project consists of a collection of five
 questions. You are to answer these questions after spending some
 amount of time looking over the code together to gather answers for
-your questions. Questions will largely be graded on completion and
-maturity, but the instructors do reserve the right to take off for
-technical inaccuracies (i.e., if you say something factually wrong). 
+your questions. Try to seriously dig into the project together--it is
+of course understood that you may not grasp every detail, but put
+forth serious effort to spend several hours reading and discussing the
+code, along with anything you have taken from it.
+
+Questions will largely be graded on completion and maturity, but the
+instructors do reserve the right to take off for technical
+inaccuracies (i.e., if you say something factually wrong).
 
 Each of these questions should take roughly at least a paragraph or
-two. Try to aim for between 1-500 words per question.
+two. Try to aim for between 1-500 words per question. You may divide
+up the work, but each of you should collectively read and agree to
+each other's answers.
 
 [ Question 1 ] 
 
@@ -48,10 +55,13 @@ got from running the compiler and generating an output.
 
 [ Question 4 ] 
 
-It is important to be criticial of code style and consistency. What
-are your feelings about the coding style in the compiler as
-demonstrated here? Do you notice any inconsistencies in terms of the
-idioms used, redundant forms, or anything of that nature?
+This is a larger project, compared to our previous projects. This
+project uses a large combination of idioms: tail recursion, folds,
+etc.. Discuss a few programming idioms that you can identify in the
+project that we discussed in class this semester. There is no specific
+definition of what an idiom is: think carefully about whether you see
+any pattern in this code that resonates with you from earlier in the
+semester.
 
 [ Question 5 ] 
 
@@ -70,3 +80,14 @@ ask me.
 
 Your team will receive a small bonus for being the first team to
 report a unique bug (unique determined by me).
+
+[ High Level Reflection ] 
+
+In roughly 100-500 words, write a summary of your findings in working
+on this project: what did you learn, what did you find interesting,
+what did you find challenging? As you progress in your career, it will
+be increasingly important to have technical conversations about the
+nuts and bolts of code, try to use this experience as a way to think
+about how you would approach doing group code critique. What would you
+do differently next time, what did you learn?
+

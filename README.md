@@ -1,8 +1,9 @@
-# Compiler Project
+# IfArith Compiler Project
 
-This is a group project--you should plan for roughly 5 hours outside
-of class meeting with your group (in person or zoom is fine, as long
-as everyone is there together).
+This is a group code review project--you should plan for roughly 5
+hours outside of class meeting with your group (in person or zoom is
+fine, as long as everyone is there together). There will be a small
+amount of programming, comprising the warmup.
 
 In this project, we will implement a tiny fragment of a compiler, from
 a small language of IfArith down to NASM (an x86-like
@@ -33,8 +34,13 @@ ifarith->ifarith-tiny in compiler.rkt. Once you have this function
 
 # Tasks
 
-[ 20% ] -- The implementation of `ifarith->ifarith-tiny`.
+[ 20% ] -- The implementation of `ifarith->ifarith-tiny`. This should
+be completed in `compiler.rkt` and must be done first. It should
+largely consist of your team discussing (perhaps rewriting) the
+implementation I detail in class. Please at least discuss the forms
+and make sure everyone is on the same page.
 
 [ 65% ] -- Answering questions in discussion.md
 
-[ 15% ] -- Peer assessment form, showing up to discussion
+[ 15% ] -- Peer assessment form, fill our peer.md and send to the TA
+Jialin Ye and the instructor.
