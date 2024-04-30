@@ -16,33 +16,29 @@ _start:	call _main
 _main:	push rbp
 	mov rbp, rsp
 	sub rsp, 112
-	mov esi, 8
-	mov [rbp-8], esi
-	mov esi, 2
+	mov esi, 1
 	mov [rbp-56], esi
-	mov esi, 3
-	mov [rbp-48], esi
 	mov esi, [rbp-56]
+	mov [rbp-16], esi
+	mov esi, 30
+	mov [rbp-48], esi
+	mov esi, [rbp-16]
 	mov [rbp-40], esi
 	mov edi, [rbp-48]
 	mov eax, [rbp-40]
 	add eax, edi
 	mov [rbp-40], eax
-	mov esi, [rbp-8]
+	mov esi, [rbp-40]
+	mov [rbp-24], esi
+	mov esi, [rbp-16]
 	mov [rbp-32], esi
-	mov edi, [rbp-40]
+	mov edi, [rbp-24]
 	mov eax, [rbp-32]
 	imul eax, edi
 	mov [rbp-32], eax
-	mov esi, 4
-	mov [rbp-24], esi
 	mov esi, [rbp-32]
-	mov [rbp-16], esi
-	mov edi, [rbp-24]
-	mov eax, [rbp-16]
-	imul eax, edi
-	mov [rbp-16], eax
-	mov esi, [rbp-16]
+	mov [rbp-8], esi
+	mov esi, [rbp-8]
 	lea rdi, [rel int_format]
 	mov eax, 0
 	call _printf

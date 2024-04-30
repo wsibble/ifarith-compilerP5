@@ -122,17 +122,18 @@
   (match e
     ;; literals
     [(? integer? i) i]
+    [#f e]
+    [#t e]
     ['true e]
     ['false e]
     [(? symbol? x) x]
     [`(,(? bop? bop) ,e0 ,e1) `(,bop ,(ifarith->ifarith-tiny e0) ,(ifarith->ifarith-tiny e1))]
     [`(,(? uop? uop) ,e) `(,uop ,(ifarith->ifarith-tiny e))]
-    ;[`(let ([,(? symbol? x) ,e]) ,e-body) `(let ([,x ,(ifarith->ifarith-tiny e)]) ,(ifarith->ifarith-tiny e-body))]
     [`(let* () ,e) (ifarith->ifarith-tiny e)]
     [`(let* ([,(? symbol? x0) ,e0]) ,e-body)
-     (ifarith->ifarith-tiny `(let ([,x0 ,e0]) ,e-body))]
+      `(let ([,x0 ,e0]) ,(ifarith->ifarith-tiny e-body))]
     ;; multiple bindings
-    [`(let* ([,(? symbol? x0) ,e0] ,@(rest-binding-pairs)) ,e-body)
+    [`(let* ([,(? symbol? x0) ,e0] ,@rest-binding-pairs) ,e-body)
      `(let ([,x0 ,e0])
        ,(ifarith->ifarith-tiny `(let* (,@rest-binding-pairs) ,e-body)))]
     ;; print an arbitrary expression (must be a number at runtime)
@@ -170,6 +171,7 @@
   (match v
     [(? lit? l) #t]
     [(? symbol? x) #t]
+  
     [_ #f]))
 (define (ifarith-tiny->anf e)
   (define (normalize-term M) (normalize M (lambda (x) x)))
