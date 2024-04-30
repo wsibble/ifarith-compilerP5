@@ -1,4 +1,4 @@
-(let* ([a #f]
+(let* ([a false]
        [c a]
-       [b #t])
+       [b true])
   (print b))
