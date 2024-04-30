@@ -131,7 +131,7 @@
     [`(let* () ,e) (ifarith->ifarith-tiny e)]
     ;; 1-binding case
     [`(let* ([,(? symbol? x0) ,e0]) ,e-body)
-     (ifarith->ifarith-tiny `(let ([,x0 ,e0]) ,e-body))]
+     (`(let ([,x0 ,e0]) , (ifarith->ifarith-tiny e-body)))]
     ;; multiple bindings
     [`(let* ([,(? symbol? x0) ,e0] ,@rest-binding-pairs) ,e-body)
      `(let ([,x0 ,e0])
