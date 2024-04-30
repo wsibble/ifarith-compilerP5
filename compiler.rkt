@@ -127,13 +127,12 @@
     [(? symbol? x) x]
     [`(,(? bop? bop) ,e0 ,e1) `(,bop ,(ifarith->ifarith-tiny e0) ,(ifarith->ifarith-tiny e1))]
     [`(,(? uop? uop) ,e) `(,uop ,(ifarith->ifarith-tiny e))]
-    ;; 0-binding case
+    ;[`(let ([,(? symbol? x) ,e]) ,e-body) `(let ([,x ,(ifarith->ifarith-tiny e)]) ,(ifarith->ifarith-tiny e-body))]
     [`(let* () ,e) (ifarith->ifarith-tiny e)]
-    ;; 1-binding case
     [`(let* ([,(? symbol? x0) ,e0]) ,e-body)
-     (`(let ([,x0 ,e0]) , (ifarith->ifarith-tiny e-body)))]
+     (ifarith->ifarith-tiny `(let ([,x0 ,e0]) ,e-body))]
     ;; multiple bindings
-    [`(let* ([,(? symbol? x0) ,e0] ,@rest-binding-pairs) ,e-body)
+    [`(let* ([,(? symbol? x0) ,e0] ,@(rest-binding-pairs)) ,e-body)
      `(let ([,x0 ,e0])
        ,(ifarith->ifarith-tiny `(let* (,@rest-binding-pairs) ,e-body)))]
     ;; print an arbitrary expression (must be a number at runtime)
