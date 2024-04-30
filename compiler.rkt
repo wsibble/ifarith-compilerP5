@@ -122,8 +122,6 @@
   (match e
     ;; literals
     [(? integer? i) i]
-    [#f e]
-    [#t e]
     ['true e]
     ['false e]
     [(? symbol? x) x]
