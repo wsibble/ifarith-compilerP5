@@ -15,9 +15,8 @@ racket compiler.rkt -v test-programs/sum1.irv
 
 (Also pass in -m for Mac)
 
-Ir-virtual is a coding architecture used with compilers in software development. The purpose of ir-virtual making a pseudocode that can be easily translated to machine code. Ir-virtual has a more defined structure as opposed to x86 which leads to pros of using ir-virtual as a representation. Ir-virtual allows for easier adaptation to different hardwares, like x86 and ARM, as it does not need to change any source code. Debugging in ir-virtual is considerably  straightforward which makes for easier testing with the debugging.
+The purpose of ir-virtual making a pseudocode that can be easily translated to machine code. Ir-virtual has a more defined structure as opposed to x86 which leads to pros of using ir-virtual as a representation. Ir-virtual allows for easier adaptation to different hardwares, like x86 and ARM, as it does not need to change any source code. Debugging in ir-virtual is considerably  straightforward which makes for easier testing with the debugging.
 Ir-virtual defined structure comes with some cons. This is as ir-virtual has more strict instruction calls which can limit more advanced capabilities that other architectures have. Ir-virtual’s efficiency also depends on the compiler and its ability to convert to machine level. Overall, for  ir-virtual the pro’s and con’s are connected to each other as ir-virtual structure leads it to be easier to adapt but may limit its capabilities too.
-Source
 
 
 
